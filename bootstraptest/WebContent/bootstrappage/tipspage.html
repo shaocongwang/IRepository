@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Navigate Element</title>
+<meta name="viewport" content="width=device-width, 
+                                     initial-scale=1.0, 
+                                     maximum-scale=1.0, 
+                                     user-scalable=no">
+      <!-- 引入 Bootstrap -->
+      <link href="/bootstraptest/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      <!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+      <script src="/bootstraptest/js/jquery1.9.1.min.js"></script>
+      <!-- 包括所有已编译的插件 -->
+      <script src="/bootstraptest/bootstrap/js/bootstrap.min.js"></script>
+ 
+      <!-- HTML5 Shiv 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
+      <!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
+      <!--[if lt IE 9]>
+         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+      <![endif]-->
+   </head>
+	   
+   <body>
+   		
+   		<div class="container" style="margin-top: 50px;">
+		  <h3>Enjoy Beauty - Audrey·Hepburn</h3>
+		  <div class="row">
+		  	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="background-color:lavenderblush;">
+				<img style="width: 100%; height: 100%;" src="/bootstraptest/img/AudreyHepburn_classic.jpg" class="img-rounded">
+	        </div>
+		  	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="background-color:lavenderblush;">
+				<img style="width: 100%; height: 100%;" src="/bootstraptest/img/AudreyHepburn_classic.jpg" class="img-circle">
+	        </div>
+		  	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="background-color:lavenderblush;">
+				<img style="width: 100%; height: 100%;" src="/bootstraptest/img/AudreyHepburn_classic.jpg" class="img-thumbnail">
+	        </div>
+		  </div>
+		</div>
+   		
+   		<br>
+   		<br>
+   		
+   		<div class="container" style="margin-top: 100px;">
+			<div class="row">
+		  		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background-color:lavenderblush; text-align: center;">
+					<br>
+					<a href="pluginpage.html"><button type="button" class="btn btn-info">GO BACK</button></a>
+					<br>
+					<br>
+		  		</div>
+			</div>
+		</div>
+   		
+   		<br>
+   		<br>
+   		
+   		
+   		<div class="container">
+   			<h3>
+   				用法
+   			</h3>
+   			<h4 style="color: #888888">
+   				当想要描述一个链接的时候，提示工具（Tooltip）就显得非常有用。
+   				提示工具（Tooltip）插件是受 Jason Frame 写的 jQuery.tipsy 的启发。
+   				提示工具（Tooltip）插件做了很多改进，例如不需要依赖图像，而是改用 CSS 实现动画效果，用 data 属性存储标题信息
+   			</h4>
+   			<h4 style="color: #888888">
+   				提示工具（Tooltip）插件不像之前所讨论的下拉菜单及其他插件那样，它不是纯 CSS 插件。
+   				如需使用该插件，您必须使用 jquery 激活它（读取 javascript）。
+   				使用下面的脚本来启用页面中的所有的提示工具（tooltip）
+   			</h4>
+   			<h4 style="color: #FF88FF">
+   				$(function () { $("[data-toggle='tooltip']").tooltip(); });
+   			</h4>
+		  <div class="row">
+		  	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background-color:lavenderblush;">
+		  		<br>
+		  		<h4>提示工具（Tooltip）插件 - 锚</h4>
+					这是一个 <a href="javascript:alert('DEFAULT Tooltip');" class="tooltip-test" data-toggle="tooltip"
+					        title="默认的 Tooltip">
+					    默认的 Tooltip
+					</a>.
+					这是一个 <a href="javascript:alert('LEFT Tooltip');" class="tooltip-test" data-toggle="tooltip"
+					        data-placement="left" title="左侧的 Tooltip">
+					    左侧的 Tooltip
+					</a>.
+					这是一个 <a href="javascript:alert('top Tooltip');" data-toggle="tooltip" data-placement="top"
+					        title="顶部的 Tooltip">
+					    顶部的 Tooltip
+					</a>.
+					这是一个 <a href="javascript:alert('BOTTOM Tooltip');" data-toggle="tooltip" data-placement="bottom"
+					        title="底部的 Tooltip">
+					    底部的 Tooltip
+					</a>.
+					这是一个 <a href="javascript:alert('RIGHT Tooltip');" data-toggle="tooltip" data-placement="right"
+					        title="右侧的 Tooltip">
+					    右侧的 Tooltip
+					</a>
+					 
+					<br>
+					 
+					<h4>提示工具（Tooltip）插件 - 按钮</h4>
+					<button id="delayTest" type="button" class="btn btn-default" data-toggle="tooltip"
+					        title="默认的 Tooltip">
+					    默认的 Tooltip
+					</button>
+					<button type="button" class="btn btn-default" data-toggle="tooltip"
+					        data-placement="left" title="左侧的 Tooltip">
+					    左侧的 Tooltip
+					</button>
+					<button type="button" class="btn btn-default" data-toggle="tooltip"
+					        data-placement="top" title="顶部的 Tooltip">
+					    顶部的 Tooltip
+					</button>
+					<button type="button" class="btn btn-default" data-toggle="tooltip"
+					        data-placement="bottom" title="底部的 Tooltip">
+					    底部的 Tooltip
+					</button>
+					<button type="button" class="btn btn-default" data-toggle="tooltip"
+					        data-placement="right" title="右侧的 Tooltip">
+					    右侧的 Tooltip
+					</button>
+					<script>
+					    $(function () { 
+					    	$("[data-toggle='tooltip']").tooltip();
+					    	$("#delayTest").tooltip({
+					    		delay:{ 
+					    			show: 500, 
+					    			hide: 500 
+					    			}
+					    	}); 
+					   	});
+					</script>
+				<br>
+				<br>
+			</div>
+		  </div>
+		</div>
+   		
+   		<br>
+   		<br>
+   		
+   		<div class="container">
+   			<h3>
+   				选项 && 方法
+   			</h3>
+   			<h4 style="color: #888888">
+   				有一些选项是通过 Bootstrap 数据 API（Bootstrap Data API）添加或通过 JavaScript 调用的
+   			</h4>
+		  <div class="row">
+		  	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background-color:lavenderblush;">
+		  		<div style="padding: 40px 100px 10px;">
+				    这是一个 
+				    <a href="javascript: alert('yoohoo tip !');" class="tooltip-show" data-toggle="tooltip"
+				            title="show">
+			            Tooltip 方法 show
+				    </a>.
+				 
+				    这是一个 
+				    <a href="javascript: alert('yoohoo tip !');" class="tooltip-hide" data-toggle="tooltip"
+				            data-placement="left" title="hide">
+			            Tooltip 方法 hide
+				    </a>.
+				 
+				   这是一个 
+				    <a href="javascript: alert('yoohoo tip !');" class="tooltip-destroy" data-toggle="tooltip"
+				            data-placement="top" title="destroy">
+			           Tooltip 方法 destroy
+				    </a>.
+				    
+				   这是一个 
+				    <a href="javascript: alert('yoohoo tip !');" class="tooltip-toggle" data-toggle="tooltip"
+				            data-placement="bottom" title="toggle">
+			            Tooltip 方法 toggle
+				    </a>.
+				    <br>
+				    <br>
+				    <br>
+				    <br>
+				    <p class="tooltip-options" >
+				    	这是一个 
+				        <a href="javascript: alert('yoohoo tip !');" data-toggle="tooltip" title="<h2>'am Header2
+				         </h2>">Tooltip 方法 options
+				        </a>.
+				    </p>
+				 
+				    <script>
+					    $(function () { $('.tooltip-show').tooltip('show');});
+				        $(function () { $('.tooltip-hide').tooltip('hide');});
+				        $(function () { $('.tooltip-destroy').tooltip('destroy');});
+				        $(function () { $('.tooltip-toggle').tooltip('toggle');});
+				        $(function () { $(".tooltip-options a").tooltip({html : true });});
+					</script>
+				</div>
+				<br>
+				<br>
+			</div>
+		  </div>
+		</div>
+   		
+   		<br>
+   		<br>
+   		
+   		<div class="container">
+   			<h3>
+   				事件
+   			</h3>
+   			<h4 style="color: #888888">
+   				在提示出现时、出现后、消失时、消失后的的事件
+   			</h4>
+		  <div class="row">
+		  	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background-color:lavenderblush;">
+				<br>
+				<h4>提示工具（Tooltip）插件 - 锚</h4>
+				<a id="tooltipone" href="javascript:alert('ONE');" class="tooltip-show" data-toggle="tooltip"
+				        title="ONE">
+			      ONE
+				</a>.
+				<a style="margin-left: 30px;" id="tooltiptwo" href="javascript:alert('ONE');" class="tooltip-show" data-toggle="tooltip"
+				        title="TWO">
+				  TWO
+				</a>.
+				<a style="margin-left: 30px;" id="tooltipthree" href="javascript:alert('THREE');" class="tooltip-show" data-toggle="tooltip"
+				        title="THREE">
+		        	THREE
+				</a>.
+				<a style="margin-left: 30px;" id="tooltipfour" href="javascript:alert('FOUR');" class="tooltip-show" data-toggle="tooltip"
+				        title="FOUR">
+			        FOUR
+				</a>.
+				 
+				<script>
+					$(function () { 
+						$('.tooltip-show').tooltip('show');
+					});
+				    $(function () { 
+				    	//提示出现时调用
+				    	$('.tooltip-show').on('show.bs.tooltip', function () {
+					        alert("Alert message on show");
+					    });
+				    	
+				    	//提示出现后调用
+				    	$('#tooltiptwo').on('shown.bs.tooltip', function () {
+					        alert("Alert message on shown");
+				    	});
+				    	
+				    	//提示消失时调用
+				    	$('#tooltipthree').on('hide.bs.tooltip', function () {
+					        alert("Alert message on hide");
+				    		
+				    	});
+				    		
+				    	//提示消失后调用
+				    	$('#tooltipfour').on('hidden.bs.tooltip', function () {
+					        alert("Alert message on hidden");
+				    	});
+					});
+				</script>				
+				<br>
+				<br>
+			</div>
+		  </div>
+		</div>
+   		
+   		<br>
+   		<br>
+   		
+   		<div class="container">
+   			<h3>
+   				弹出框插件-Popover
+   			</h3>
+   			<h4 style="color: #888888">
+   				弹出框（Popover）与工具提示（Tooltip）类似，提供了一个扩展的视图。
+   				如需激活弹出框，用户只需把鼠标悬停在元素上即可。
+   				弹出框的内容完全可使用 Bootstrap 数据 API（Bootstrap Data API）来填充。
+   				该方法依赖于工具提示（tooltip）
+   			</h4>
+   			<h4 style="color: #888888">
+   				弹出框（Popover）插件不像之前所讨论的下拉菜单及其他插件那样，它不是纯 CSS 插件。
+   				如需使用该插件，必须使用 jquery 激活它（读取 javascript）。
+   				使用下面的脚本来启用页面中的所有的弹出框（popover）：
+   			</h4>
+   			<h4 style="color: #FF88FF">
+   				$(function () { $("[data-toggle='popover']").popover(); });
+   			</h4>
+		  <div class="row">
+		  	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background-color:lavenderblush;">
+				<br>
+				<div class="container" style="padding: 100px 50px 10px;" >
+				    <button type="button" class="btn btn-default" title="Popover title"
+				            data-container="body" data-toggle="popover" data-placement="left"
+				            data-content="左侧的 Popover 中的一些内容">
+				    	左侧的 Popover
+				    </button>
+				    <button type="button" class="btn btn-primary" title="Popover title"
+				            data-container="body" data-toggle="popover" data-placement="top"
+				            data-content="顶部的 Popover 中的一些内容">
+			       		顶部的 Popover
+				    </button>
+				    <button type="button" class="btn btn-success" title="Popover title"
+				            data-container="body" data-toggle="popover" data-placement="bottom"
+				            data-content="底部的 Popover 中的一些内容">
+			        	底部的 Popover
+				    </button>
+				    <button type="button" class="btn btn-warning" title="Popover title"
+				            data-container="body" data-toggle="popover" data-placement="right"
+				            data-content="右侧的 Popover 中的一些内容">
+			        	右侧的 Popover
+				    </button>
+				</div>
+				 
+				<script>
+					$(function (){
+					    $("[data-toggle='popover']").popover();
+					});
+				</script>
+				<br>
+				<br>
+			</div>
+		  </div>
+		</div>
+   		
+   		<br>
+   		<br>
+   		
+   		<div class="container">
+   			<h3>
+   				初始化显示或者隐藏
+   			</h3>
+		  <div class="row">
+		  	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background-color:lavenderblush;">
+				<br>
+				<div class="container" style="padding: 100px 50px 10px;" >
+				    <button type="button" class="btn btn-default popover-show"
+				            title="Popover title" data-container="body"
+				            data-toggle="popover" data-placement="left"
+				            data-content="左侧的 Popover 中的一些内容 —— show 方法">
+				        左侧的 Popover
+				    </button>
+				    <button type="button" class="btn btn-primary popover-hide"
+				            title="Popover title" data-container="body"
+				            data-toggle="popover" data-placement="top"
+				            data-content="顶部的 Popover 中的一些内容 —— hide 方法">
+				        顶部的 Popover
+				    </button>
+				    <button type="button" class="btn btn-success popover-destroy"
+				            title="Popover title" data-container="body"
+				            data-toggle="popover" data-placement="bottom"
+				            data-content="底部的 Popover 中的一些内容 —— destroy 方法">
+				        底部的 Popover
+				    </button>
+				    <button type="button" class="btn btn-warning popover-toggle"
+				            title="Popover title" data-container="body"
+				            data-toggle="popover" data-placement="right"
+				            data-content="右侧的 Popover 中的一些内容 —— toggle 方法">
+				        右侧的 Popover
+				    </button><br><br><br><br><br><br>
+				    <p class="popover-options">
+				        <a href="javascript:alert('popover-options');" type="button" class="btn btn-warning" title="<h2>Title</h2>"
+				           data-container="body" data-toggle="popover" data-content="
+				         <h4>Popover 中的一些内容 —— options 方法</h4>">
+				            Popover
+				        </a>
+				    </p>
+				    <script>
+						$(function () { $('.popover-show').popover('show');});
+				        $(function () { $('.popover-hide').popover('hide');});
+				        $(function () { $('.popover-destroy').popover('destroy');});
+				        $(function () { $('.popover-toggle').popover('toggle');});
+				        $(function () { $(".popover-options a").popover({html : true });});
+					</script>
+				</div>
+				<br>
+				<br>
+			</div>
+		  </div>
+		</div>
+   		
+   		<br>
+   		<br>
+   		
+   		<div class="container">
+   			<h3>
+   				事件
+   			</h3>
+   			<h4 style="color: #888888">
+   				当调用 show 实例方法时立即触发该事件。
+   			</h4>
+   			<h4 style="color: #FF88FF">
+   				$('#mypopover').on('show.bs.popover', function () {
+				  // 执行一些动作...
+				});
+   			</h4>
+   			<h4 style="color: #888888">
+   				当弹出框对用户可见时触发该事件（将等待 CSS 过渡效果完成）。
+   			</h4>
+   			<h4 style="color: #FF88FF">
+   				$('#mypopover').on('shown.bs.popover', function () {
+				  // 执行一些动作...
+				});
+   			</h4>
+   			<h4 style="color: #888888">
+   					当调用 hide 实例方法时立即触发该事件。
+   			</h4>
+   			<h4 style="color: #FF88FF">
+   				$('#mypopover').on('hide.bs.popover', function () {
+				  // 执行一些动作...
+				});
+   			</h4>
+   			<h4 style="color: #888888">
+   				当工具提示对用户隐藏时触发该事件（将等待 CSS 过渡效果完成）。
+   			</h4>
+   			<h4 style="color: #FF88FF">
+   				$('#mypopover').on('hidden.bs.popover', function () {
+				  // 执行一些动作...
+				});
+   			</h4>
+		  <div class="row">
+		  	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background-color:lavenderblush;">
+				<br>
+				<div clas="container" style="padding: 50px 50px 10px;" >
+				    <button type="button" class="btn btn-primary popover-show"
+				            title="Popover title" data-container="body"
+				            data-toggle="popover"
+				            data-content="左侧的 Popover 中的一些内容 —— show 方法">
+				        左侧的 Popover
+				    </button>
+				 
+				</div>
+				<script>
+					$(function () { $('.popover-show').popover('show');});
+				    $(function () { 
+				    	$('.popover-show').on('shown.bs.popover', function () {
+				    		alert("当显示时警告消息");
+				    	});
+				    });
+				</script>
+				<br>
+				<br>
+			</div>
+		  </div>
+		</div>
+		
+		<br>
+		<br>
+   		
+		<div class="container" style="margin-top: 100px;">
+			<div class="row">
+		  		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background-color:lavenderblush; text-align: center;">
+					<h4>This Is The Bottom Line - All Right Resoved - <span><p class="form-control-static">ShaoCongwang@126.com</p></span></h4>
+		  		</div>
+			</div>
+		</div>
+   </body>
+</html>
