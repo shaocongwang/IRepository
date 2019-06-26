@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="/bootstraptest/js/jquery1.9.1.min.js"></script>
+<script type="text/javascript" src="/bootstraptest/js/vue/vue2.6.10.min.js"></script>
+</head>
+<body>
+	<div id="app">
+	  <p>{{ message }}</p>
+	</div>
+	<script>
+		new Vue({
+			el: '#app',
+			data: {
+				message: 'Hello Vue.js!'
+			}
+		});
+	</script>
+	<div id="vue_det">
+		<h4>site : {{site}}</h4>
+		<h4>url : {{url}}</h4>
+		<h4>{{details()}}</h4>
+	</div>
+	<script>
+		var vm = new Vue({
+			el: '#vue_det',
+			data: {
+				site: "菜鸟教程",
+				url: "www.runoob.com",
+				alexa: "10000"
+			},
+			methods: {
+				details: function() {
+					return  this.site + " - 学的不仅是技术，更是梦想！";
+				}
+			}
+		})
+	</script>
+	
+	<hr>
+	
+	<div id="vue_det1">
+		<h4>site : {{site}}</h4>
+		<h4>url : {{url}}</h4>
+		<h4>{{details()}}</h4>
+	</div>
+	<script type="text/javascript">
+		// 我们的数据对象
+		var data = { site: "菜鸟教程", url: "www.runoob.com", alexa: 10000}
+		var vm1 = new Vue({
+			el: '#vue_det1',
+			data: data
+		})
+	
+		document.write(vm1.$data === data); // true
+		document.write("<br>");
+		document.write(vm1.$el === document.getElementById('#vue_det1')); // true
+	</script>
+
+	<hr>
+	
+	<div id="app1">
+	    <div v-html="message"></div>
+	</div>
+	
+	<script>
+		new Vue({
+		  el: '#app1',
+		  data: {
+		    message: '<h1>菜鸟教程</h1>'
+		  }
+		})
+	</script>
+	
+	<hr>
+	
+	<div id="app2">
+	  <label for="r1">修改颜色</label><input type="checkbox" v-model="use" id="r1">
+	  <br><br>
+	  <div v-bind:class="{'class1': use}">
+	    v-bind:class 指令
+	  </div>
+	</div>
+	    
+	<script>
+		new Vue({
+		    el: '#app2',
+		  data:{
+		      use: true
+		  }
+		});
+	</script>
+	
+	<hr>
+	
+	<div id="app3">
+	    {{5+5}}<br>
+	    {{ ok ? 'YES' : 'NO' }}<br>
+	    {{ message.split('').reverse().join('') }}
+	    <div v-bind:id="'list-' + id">菜鸟教程</div>
+	</div>
+	    
+	<script>
+		new Vue({
+		  el: '#app3',
+		  data: {
+		    ok: false,
+		    message: 'RUNOOB',
+		    id : 1
+		  }
+		})
+	</script>
+	
+	<hr>
+	
+	<div id="app4">
+	    <p v-if="seen">现在你看到我了</p>
+	</div>
+	    
+	<script>
+		new Vue({
+		  el: '#app4',
+		  data: {
+		    seen: true
+		  }
+		})
+	</script>
+	
+	<hr>
+	
+	<div id="app5">
+	    <pre><a v-bind:href="url">菜鸟教程</a></pre>
+	    <br>
+	</div>
+	    
+	<script>
+		new Vue({
+		  el: '#app5',
+		  data: {
+		    url: 'http://www.runoob.com'
+		  }
+		})
+	</script>
+	
+	<hr>
+	
+	<div id="app6">
+	    <p>{{ message }}</p>
+	    <input v-model="message">
+	</div>
+	    
+	<script>
+		new Vue({
+		  el: '#app6',
+		  data: {
+		    message: 'Runoob!'
+		  }
+		})
+	</script>
+	
+	<div id="app7">
+	    <p>{{ message }}</p>
+	    <button v-on:click="reverseMessage">反转字符串!</button>
+	</div>
+	    
+	<script>
+		new Vue({
+		  el: '#app7',
+		  data: {
+		    message: 'Runoob!'
+		  },
+		  methods: {
+		    reverseMessage: function () {
+		      this.message = this.message.split('').reverse().join('')
+		    }
+		  }
+		})
+	</script>
+</body>
+</html>

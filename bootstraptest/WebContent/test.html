@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="/bootstraptest/js/jquery1.9.1.min.js"></script>
+	<script type="text/javascript">
+		function test(){
+			$.ajax({
+				url:"http://127.0.0.1:8888/",
+				atype:"json",
+				success:function(data){
+					//var htmlStr = "</div><span style=\"color: #" + generateColor() + "\">" + data + "</span>";
+					var htmlStr = "<span style='color: " + generateColor() + ";'>" + generateColor() + "-" + data + "</span><br>";
+					$("#testDiv").prepend(htmlStr);
+				}
+			});
+		}
+		var colorVarArr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E' ,'F'];
+		//随机生成颜色
+		function generateColor(){
+			var colorValue = "#"; 
+			for(var ind = 0; ind < 6 ; ind++){
+				var index = (Math.floor(Math.random() * 100))%16;
+				colorValue = colorValue + colorVarArr[index];
+			}
+			return colorValue;
+		}
+	</script>
+</head>
+<body>
+	
+	<div style="margin-top: 100px; margin-left: 100px; text-align: center;">
+		<button onclick="test()">test</button>
+		<br>
+		<div id="testDiv"></div>
+	
+</body>
+</html>
