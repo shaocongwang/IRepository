@@ -1,0 +1,21 @@
+在 npm 资源库中注册用户
+命令： npm adduser
+Username: shaocongwang
+Password: wshc1042554781
+Email: (this IS public) shaocongwang@126.com
+
+
+注册反馈信息，访问 -- https://registry.npmjs.org/
+{
+	"db_name": "registry",
+	"doc_count": 1298153,
+	"doc_del_count": 341,
+	"update_seq": 2938506,
+	"purge_seq": 0,
+	"compact_running": false,
+	"disk_size": 25536246744,
+	"data_size": 16206838690,
+	"instance_start_time": "1561588749874182",
+	"disk_format_version": 6,
+	"committed_update_seq": 2938505
+}
